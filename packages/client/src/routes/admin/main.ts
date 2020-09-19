@@ -4,6 +4,7 @@ import AdminLayout from '../../layouts/admin/AdminLayout.vue'
 
 import PostsPage from '../../layouts/admin/pages/PostsPage.vue';
 import PostPage from '../../layouts/admin/pages/PostPage.vue';
+import PostEditPage from '../../layouts/admin/pages/PostEditPage.vue';
 
 const adminRoutes: RouteConfig  = {
     path: "/admin",
@@ -19,7 +20,11 @@ const adminRoutes: RouteConfig  = {
             path: 'post/:id',
             name: 'post',
             component: PostPage,
-            
+        },
+        {
+            path: 'post/edit',
+            name: 'postEdit',
+            component: PostEditPage,
         }
     ]
 };

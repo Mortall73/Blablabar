@@ -4,7 +4,7 @@
             <h1>Posts</h1>
         </div>
         <div class="page__actions">
-            <button type="button" class="btn btn--add">
+            <button type="button" class="btn btn--add" @click.prevent="goToCreatePost">
                 Add new
             </button>
         </div>
@@ -52,6 +52,10 @@ export default class PostsPage extends Vue {
            console.log(`%c Error in creating fetchPosts: ${err}`, 'background: #ca0e00; color: #fff; padding: 5px');
         }
        
+    }
+
+    goToCreatePost() {
+        this.$router.push({ name: 'postEdit' });
     }
 }
 </script>
