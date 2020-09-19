@@ -1,0 +1,17 @@
+### Dependencies
+node_modules
+
+dist
+test
+
+### Node template
+.DS_Store
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# IDE
+.vscode
+.idea

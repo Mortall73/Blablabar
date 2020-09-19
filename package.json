@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Vlad",
+  "license": "ISC",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@types",
+      "**/@types/**",
+      "**/@tsed",
+      "**/@tsed/**"
+    ]
+  },
+  "dependencies": {
+    "lerna": "^3.22.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:production": "lerna bootstrap -- --production",
+    "build": "lerna run build --stream",
+    "build:client": "lerna run build --scope=@project/client --stream",
+    "build:server": "lerna run build --scope=@project/server --stream",
+    "start": "lerna run start --stream --parallel",
+    "start:client": "lerna run start --scope=@project/client --stream",
+    "start:server": "lerna run start --scope=@project/server --stream"
+  }
+}

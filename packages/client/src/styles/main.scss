@@ -1,0 +1,10 @@
+@import './utils/normalize';
+@import './utils/fonts.scss';
+@import './components/buttons.scss';
+
+@import './components/page';
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
