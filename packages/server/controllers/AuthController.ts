@@ -1,6 +1,6 @@
 
 import { Controller, Post, BodyParams, Req, Returns, Res } from "@tsed/common";
-import {Authenticate} from "@tsed/passport";
+import { Authenticate } from "@tsed/passport";
 
 import { Credentials } from '../types/types';
 import { User } from '../models/UserModel';
@@ -18,6 +18,6 @@ export class PostsController {
         body: Credentials
     ) {
         // FACADE
-        //return req.;
+        return req.user
     }
 }
