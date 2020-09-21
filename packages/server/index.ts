@@ -1,5 +1,7 @@
 import { $log } from "@tsed/common";
 import { PlatformExpress } from "@tsed/platform-express";
+
+import './env';
 import { Server } from "./server";
 
 async function createServer() {
