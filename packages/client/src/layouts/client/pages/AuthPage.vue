@@ -4,7 +4,7 @@
         <form @submit.prevent="uathenticate" enctype="multipart/form-data">
             <input type="text" name="email" v-model="email">
             <input type="password" name="password" v-model="password">
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </template>
@@ -33,7 +33,7 @@ export default class AuthPage extends Vue {
             },
             body: JSON.stringify(data)
         });
-        console.log(result);
+        console.log(await result.json());
     }
 }
 </script>

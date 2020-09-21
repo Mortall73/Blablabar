@@ -11,6 +11,9 @@ import * as methodOverride from "method-override";
 import "@tsed/mongoose"; 
 import "@tsed/platform-express";
 
+
+import { User }  from './models/UserModel';
+
 const rootDir = __dirname;
 
 @Configuration({
@@ -36,6 +39,9 @@ const rootDir = __dirname;
     `${rootDir}/auth/**/*.ts`,
   ],
   acceptMimes: ["application/json"],
+  passport: {
+    userInfoModel: User
+  }
 })
 export class Server {
 	@Inject()
