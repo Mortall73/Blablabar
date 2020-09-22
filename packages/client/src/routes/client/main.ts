@@ -3,6 +3,7 @@ import { RouteConfig } from "vue-router";
 import ClientLayout from '../../layouts/client/ClientLayout.vue';
 import RegistrationPage from '../../layouts/client/pages/RegistrationPage.vue';
 import AuthPage from '../../layouts/client/pages/AuthPage.vue';
+import UiKitPage from '../../layouts/client/pages/UiKitPage.vue';
 
 const clientRoutes: RouteConfig  = {
     path: "/",
@@ -18,6 +19,11 @@ const clientRoutes: RouteConfig  = {
             path: 'signin',
             name: 'signin',
             component: AuthPage,
+        },
+        {
+            path: 'uikit',
+            name: 'uikit',
+            component: UiKitPage,
         }
     ]
 };
