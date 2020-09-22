@@ -12,15 +12,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CardPlace',
-  props: {
-    card: {
-      type: Object,
-      required: true,
-    }
-  }
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator'
+
+@Component
+export default class CardPlace extends Vue {
+
+  @Prop({ default: [] })
+  readonly card?: Object
+
 }
 </script>
 

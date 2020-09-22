@@ -22,17 +22,27 @@
       </div>
       <div class="block__item">
         <p class="block__title">CHECKBOX/RADIOBUTTON</p>
-        <v-checkbox/>
-        <v-checkbox/>
+        <v-radio-button label="radio" name="q"/>
+        <v-radio-button label="radio" name="q" checked="true"/>
+        <v-radio-button label="radio" name="q" disabled="true"/>
+        <v-checkbox label="checkbox" name="q"/>
+        <v-checkbox label="checkbox" name="q" checked="true"/>
+        <v-checkbox label="checkbox" name="q" disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">INPUT</p>
+        <v-input placeholder="bla bla"/>
+        <v-input type="search" placeholder="bla bla"/>
+        <v-input type ="number" placeholder="bla bla"/>
+        <v-input placeholder="bla bla" disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">TEXTAREA</p>
+        <v-textarea/>
       </div>
       <div class="block__item">
         <p class="block__title">CARDS</p>
+        <v-card-place v-for="card in cards" :key="card"/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -54,6 +64,8 @@ import Input from '../../../components/ui-kit/Input.vue';
 import Button from '../../../components/ui-kit/Button.vue';
 import RadioButton from '../../../components/ui-kit/RadioButton.vue';
 import Checkbox from '../../../components/ui-kit/Checkbox.vue';
+import Textarea from '../../../components/ui-kit/Textarea.vue';
+import CardPlace from '../../../components/CardPlace.vue';
 
 @Component({
     components: {
@@ -61,11 +73,23 @@ import Checkbox from '../../../components/ui-kit/Checkbox.vue';
         'v-input': Input,
         'v-radio-button': RadioButton,
         'v-checkbox': Checkbox,
+        'v-textarea': Textarea,
+        'v-card-place': CardPlace,
     }
 })
 
 export default class UiKitPage extends Vue {
-
+  private cards = [
+    {
+      name: 'bla bla'
+    },
+    {
+      name: 'bla bla'
+    },
+    {
+      name: 'bla bla'
+    }
+  ]
 }
 </script>
 
