@@ -48,42 +48,5 @@ export default class Checkbox extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.radio-btn__wrap {
-  display: flex;
 
-}
-.radio-btn {
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 24px;
-  position: relative;
-
-  &__hidden {
-    padding: 0px;
-    position: absolute;
-    margin-right:-15px;
-    visibility: hidden;
-  }
-  &__button {
-    display: inline-flex;
-    width: 20px;
-    height: 20px;
-    box-sizing: border-box;
-    border: 1px solid $cl-ncs;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-  }
-  &__text {
-    font-family: $font-open-semibold;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.02em;
-    cursor: pointer;
-  }
-  &:hover .radio-btn__button {
-    border-color: $cl-read;
-  }
-}
 </style>

@@ -50,57 +50,5 @@ export default class Checkbox extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.checkbox__wrap {
-  display: flex;
-}
-.checkbox {
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 24px;
 
-  &__hidden {
-    padding: 0px;
-    margin-right:-13px;
-    visibility: hidden;
-  }
-  &__button {
-    display: inline-flex;
-    width: 18px;
-    height: 18px;
-    box-sizing: border-box;
-    border: 1px solid $cl-ncs;
-    align-items: center;
-    justify-content: center;
-  }
-  &__text {
-    font-family: $font-open-semibold;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.02em;
-    cursor: pointer;
-  }
-  &:hover .checkbox__button {
-    border-color: $cl-light-blue;
-  }
-
-  &__question {
-    margin-bottom: 15px;
-    width: 100%;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-} 
-  .icon-check {
-        visibility: hidden;
-        color: $cl-white;
-        font-size: 7px;
-  }
-  .checkbox__hidden:checked+.checkbox__button {
-      background-color: $cl-light-blue;
-      border-color: $cl-light-blue;
-      .icon-check {
-        visibility: visible;
-  }
-}
 </style>
