@@ -1,10 +1,12 @@
 @import './utils/normalize';
-@import './utils/fonts.scss';
+@import './utils/_fonts.scss';
 @import './components/buttons.scss';
+@import './components/link.scss';
 
 @import './components/page';
 
 html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+	font-family: 'Comfortaa';
+	font-weight: 600;
+	font-style: normal;
 }
