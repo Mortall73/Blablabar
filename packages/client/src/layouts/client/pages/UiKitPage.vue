@@ -23,18 +23,18 @@
       <div class="block__item">
         <p class="block__title">CHECKBOX/RADIOBUTTON</p>
         <v-radio-button label="radio" name="q"/>
-        <v-radio-button label="radio" name="q" checked="true"/>
-        <v-radio-button label="radio" name="q" disabled="true"/>
+        <v-radio-button label="radio" name="q" :checked="true"/>
+        <v-radio-button label="radio" name="q" :disabled="true"/>
         <v-checkbox label="checkbox" name="q"/>
-        <v-checkbox label="checkbox" name="q" checked="true"/>
-        <v-checkbox label="checkbox" name="q" disabled="true"/>
+        <v-checkbox label="checkbox" name="q" :checked="true"/>
+        <v-checkbox label="checkbox" name="q" :disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">INPUT</p>
         <v-input placeholder="bla bla"/>
         <v-input type="search" placeholder="bla bla"/>
         <v-input type ="number" placeholder="bla bla"/>
-        <v-input placeholder="bla bla" disabled="true"/>
+        <v-input placeholder="bla bla" :disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">TEXTAREA</p>
@@ -42,7 +42,7 @@
       </div>
       <div class="block__item">
         <p class="block__title">CARDS</p>
-        <v-card-place v-for="card in cards" :key="card"/>
+        <v-card-place v-for="card in cards" :key="card.id"/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -81,13 +81,16 @@ import CardPlace from '../../../components/CardPlace.vue';
 export default class UiKitPage extends Vue {
   private cards = [
     {
-      name: 'bla bla'
+			name: 'bla bla',
+			id: 1,
     },
     {
-      name: 'bla bla'
+			name: 'bla bla',
+			id: 2,
     },
     {
-      name: 'bla bla'
+			name: 'bla bla',
+			id: 3,
     }
   ]
 }
