@@ -10,16 +10,20 @@
       </div>
       <div class="block__item">
         <p class="block__title">BUTTONS</p>
-        <v-button/>
-        <v-button/>
-        <v-button/>
+        <v-button label="Button"/>
+        <v-button label="Button"/>
+        <v-button label="Button"/>
       </div>
       <div class="block__item">
         <p class="block__title">LINKS</p>
-        <v-link label="link"/>
+        <router-link :to="{name: 'registration'}" class="link">Link</router-link>
+        <router-link :to="{name: 'registration'}" class="link">Link</router-link>
+        <router-link :to="{name: 'registration'}" class="link">Link</router-link>
       </div>
       <div class="block__item">
         <p class="block__title">CHECKBOX/RADIOBUTTON</p>
+        <v-checkbox/>
+        <v-checkbox/>
       </div>
       <div class="block__item">
         <p class="block__title">INPUT</p>
@@ -46,7 +50,6 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
-import Link from '../../../components/ui-kit/Link.vue';
 import Input from '../../../components/ui-kit/Input.vue';
 import Button from '../../../components/ui-kit/Button.vue';
 import RadioButton from '../../../components/ui-kit/RadioButton.vue';
@@ -54,7 +57,6 @@ import Checkbox from '../../../components/ui-kit/Checkbox.vue';
 
 @Component({
     components: {
-        'v-link': Link,
         'v-button': Button,
         'v-input': Input,
         'v-radio-button': RadioButton,

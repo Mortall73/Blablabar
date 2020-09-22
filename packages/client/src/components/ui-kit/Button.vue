@@ -1,9 +1,10 @@
 <template>
   <button 
-		:is="tag" 
-		:class="className"
-		@click="$emit('click')">
-		</button>
+    :is="tag" 
+    @click="$emit('click')"
+    >
+      {{label}}
+    </button>
 </template>
 
 <script lang="ts">
@@ -19,17 +20,9 @@ export default class Button extends Vue {
   })
   readonly tag!: string
 
-  @Prop({
-    default: 'default',
-    validator (value: string): boolean {
-      return !!value.match(/(default)/)
-    },
-  })
-  readonly skin!: string
+  @Prop({ default: '' })
+  readonly label?: string
 
-  private get className (): string {
-    return `button button_skin-${this.skin}`
-  }
 }
 </script>
 
