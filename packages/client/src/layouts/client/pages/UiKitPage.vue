@@ -29,7 +29,7 @@
         <v-checkbox label="checkbox" name="q" :checked="true"/>
         <v-checkbox label="checkbox" name="q" :disabled="true"/>
       </div>
-      <div class="block__item">
+      <div class="block__item black">
         <p class="block__title">INPUT</p>
         <v-input placeholder="bla bla"/>
         <v-input type="search" placeholder="bla bla"/>
@@ -91,19 +91,24 @@ export default class UiKitPage extends Vue {
 
 
 <style lang="scss">
+@import '../../../styles/utils/_variables.scss';
   .block {
     margin: 0 auto;
     width: 1100px;
     &__item {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+			justify-content: space-around;
+			padding-bottom: 50px;
     }
     &__title {
       font-size: 32px;
       text-align: center;
       width: 100%;
-    }
+		}
+		.black {
+			background-color: $cl-black-bg;
+		}
   }
 </style>
