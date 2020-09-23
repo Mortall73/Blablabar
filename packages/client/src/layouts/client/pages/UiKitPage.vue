@@ -60,20 +60,10 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
-import Input from '@/components/ui-kit/Input.vue';
-import Button from '@/components/ui-kit/Button.vue';
-import RadioButton from '@/components/ui-kit/RadioButton.vue';
-import Checkbox from '@/components/ui-kit/Checkbox.vue';
-import Textarea from '@/components/ui-kit/Textarea.vue';
 import CardPlace from '@/components/CardPlace.vue';
 
 @Component({
     components: {
-        'v-button': Button,
-        'v-input': Input,
-        'v-radio-button': RadioButton,
-        'v-checkbox': Checkbox,
-        'v-textarea': Textarea,
         'v-card-place': CardPlace,
     }
 })
