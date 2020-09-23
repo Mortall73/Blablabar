@@ -20,22 +20,22 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class Input extends Vue {
 
   @Prop({ default: '' })
-	readonly id?: string
-
-	@Prop({ default: '' })
-	readonly name?: string
-
-	@Prop({ default: '' })
-	readonly placeholder?: string
-
-	@Prop({ default: '' })
-	readonly type?: string
+  readonly id?: string
 
   @Prop({ default: '' })
-	readonly value?: string
+  readonly name?: string
+
+  @Prop({ default: '' })
+  readonly placeholder?: string
+
+  @Prop({ default: '' })
+  readonly type?: string
+
+  @Prop({ default: '' })
+  readonly value?: string
 
   @Prop({ default: false })
-	readonly required?: boolean
+  readonly required?: boolean
 
   @Prop({ default: false })
   readonly disabled?: boolean

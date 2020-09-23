@@ -23,18 +23,18 @@
       <div class="block__item">
         <p class="block__title">CHECKBOX/RADIOBUTTON</p>
         <v-radio-button label="radio" name="q"/>
-        <v-radio-button label="radio" name="q" checked="true"/>
-        <v-radio-button label="radio" name="q" disabled="true"/>
+        <v-radio-button label="radio" name="q" :checked="true"/>
+        <v-radio-button label="radio" name="q" :disabled="true"/>
         <v-checkbox label="checkbox" name="q"/>
-        <v-checkbox label="checkbox" name="q" checked="true"/>
-        <v-checkbox label="checkbox" name="q" disabled="true"/>
+        <v-checkbox label="checkbox" name="q" :checked="true"/>
+        <v-checkbox label="checkbox" name="q" :disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">INPUT</p>
         <v-input placeholder="bla bla"/>
         <v-input type="search" placeholder="bla bla"/>
         <v-input type ="number" placeholder="bla bla"/>
-        <v-input placeholder="bla bla" disabled="true"/>
+        <v-input placeholder="bla bla" :disabled="true"/>
       </div>
       <div class="block__item">
         <p class="block__title">TEXTAREA</p>
@@ -42,7 +42,11 @@
       </div>
       <div class="block__item">
         <p class="block__title">CARDS</p>
-        <v-card-place v-for="card in cards" :key="card"/>
+        <v-card-place v-for="card in cards" :key="card.id"/>
+				<v-card-meeting/>
+				<v-card-date/>
+				<v-card-user/>
+				<v-user/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -60,34 +64,26 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
-import Input from '../../../components/ui-kit/Input.vue';
-import Button from '../../../components/ui-kit/Button.vue';
-import RadioButton from '../../../components/ui-kit/RadioButton.vue';
-import Checkbox from '../../../components/ui-kit/Checkbox.vue';
-import Textarea from '../../../components/ui-kit/Textarea.vue';
-import CardPlace from '../../../components/CardPlace.vue';
-
+import CardPlace from '@/layouts/client/components/CardPlace.vue';
+import CardMeeting from '@/layouts/client/components/CardMeeting.vue';
+import CardDate from '@/layouts/client/components/CardDate.vue';
+import CardUser from '@/layouts/client/components/CardUser.vue';
+import User from '@/layouts/client/components/User.vue';
 @Component({
     components: {
-        'v-button': Button,
-        'v-input': Input,
-        'v-radio-button': RadioButton,
-        'v-checkbox': Checkbox,
-        'v-textarea': Textarea,
-        'v-card-place': CardPlace,
+				'v-card-place': CardPlace,
+				'v-card-meeting': CardMeeting,
+				'v-card-date': CardDate,
+				'v-card-user': CardUser,
+				'v-user': User,
     }
 })
 
 export default class UiKitPage extends Vue {
   private cards = [
     {
-      name: 'bla bla'
-    },
-    {
-      name: 'bla bla'
-    },
-    {
-      name: 'bla bla'
+			name: 'bla bla',
+			id: 1,
     }
   ]
 }

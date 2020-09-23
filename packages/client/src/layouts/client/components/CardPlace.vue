@@ -18,7 +18,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class CardPlace extends Vue {
 
-  @Prop({ default: [] })
+	@Prop({ default: ()=>{
+		return {}
+	}})
   readonly card?: Object
 
 }

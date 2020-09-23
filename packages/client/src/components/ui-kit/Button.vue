@@ -1,5 +1,5 @@
 <template>
-  <button 
+  <button class="button"
     :is="tag" 
     @click="$emit('click')"
     >
@@ -27,5 +27,16 @@ export default class Button extends Vue {
 </script>
 
 <style lang="scss">
-
+@import '../../styles/utils/_variables.scss';
+.button {
+	padding: 7px 20px;
+	border-radius: 40px;
+	background-color: $cl-color-button;
+	border: none;
+	outline: none;
+	color: $color-text;
+	&--bg	{
+		background-color: $cl-color-button--bg;
+	}
+}
 </style>
