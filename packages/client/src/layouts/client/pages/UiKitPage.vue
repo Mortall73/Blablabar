@@ -43,6 +43,7 @@
       <div class="block__item">
         <p class="block__title">CARDS</p>
         <v-card-place v-for="card in cards" :key="card.id"/>
+				<v-card-meeting/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -60,11 +61,13 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
-import CardPlace from '@/components/CardPlace.vue';
+import CardPlace from '@/layouts/client/components/CardPlace.vue';
+import CardMeeting from '@/layouts/client/components/CardMeeting.vue';
 
 @Component({
     components: {
-        'v-card-place': CardPlace,
+				'v-card-place': CardPlace,
+				'v-card-meeting': CardMeeting,
     }
 })
 
@@ -73,14 +76,6 @@ export default class UiKitPage extends Vue {
     {
 			name: 'bla bla',
 			id: 1,
-    },
-    {
-			name: 'bla bla',
-			id: 2,
-    },
-    {
-			name: 'bla bla',
-			id: 3,
     }
   ]
 }
