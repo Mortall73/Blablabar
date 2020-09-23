@@ -44,6 +44,7 @@
         <p class="block__title">CARDS</p>
         <v-card-place v-for="card in cards" :key="card.id"/>
 				<v-card-meeting/>
+				<v-card-date/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -63,11 +64,13 @@ import { Vue, Component } from 'vue-property-decorator';
 
 import CardPlace from '@/layouts/client/components/CardPlace.vue';
 import CardMeeting from '@/layouts/client/components/CardMeeting.vue';
+import CardDate from '@/layouts/client/components/CardDate.vue';
 
 @Component({
     components: {
 				'v-card-place': CardPlace,
 				'v-card-meeting': CardMeeting,
+				'v-card-date': CardDate,
     }
 })
 
