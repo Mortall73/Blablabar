@@ -5,8 +5,8 @@
 			<span class="card-meeting__organizer-name">{{OrganizerName}}</span>
 		</div>
 		<div class="card-meeting__place-galery">
-			<div class="card-meeting__place-photo">
-				<img src="../../../../assets/images/bar.jpg" alt="">
+			<div class="card-meeting__place-photo-wrapper">
+				<img class="card-meeting__place-photo" src="../../../../assets/images/bar.jpg" alt="">
 			</div>
 			<!-- slider-->
 		</div>
@@ -65,8 +65,12 @@ data () {
 	&__organizer {
 		padding: 20px;
 	}
-	&__place-photo {
+	&__place-photo-wrapper {
 		height: 150px;
+		overflow: hidden;
+	}
+	&__place-photo {
+		object-fit: cover;
 	}
 	&__place-galery {
 		margin-bottom: 20px;
