@@ -17,13 +17,22 @@
 				<!-- CardUser-->
 			</div>
 		</div>
+		<div class="card-meeting__date">
+			<v-card-date/>
+		</div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component
+import CardDate from '@/layouts/client/components/CardDate.vue';
+
+@Component({
+    components: {
+				'v-card-date': CardDate,
+    }
+})
 export default class CardMeeting extends Vue {
 
 @Prop({ default: ()=>{
@@ -44,7 +53,7 @@ data () {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 @import '../../../styles/utils/_variables.scss';
 .card-meeting{
 	max-width: 320px;
@@ -52,6 +61,7 @@ data () {
 	border-radius: 20px;
 	height: 400px;
 	color: $color-text;
+	position: relative;
 	&__organizer {
 		padding: 20px;
 	}
@@ -59,7 +69,7 @@ data () {
 		height: 150px;
 	}
 	&__place-galery {
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 	&__info {
 		padding: 20px;
@@ -75,6 +85,11 @@ data () {
 		font-size: 13px;
 		color: $color-text-light;
 		margin-bottom: 20px;
+	}
+	&__date {
+		position: absolute;
+		top: 175px;
+		left: 16px;
 	}
 }
 </style>
