@@ -1,18 +1,18 @@
 <template>
   <div class="card-user">
 		<div class="card-user__bg-wrapper">
-			<img src="../../../../assets/images/bg.jpg" alt="" class="card-user__bg">
+			<img :src="bg" alt="" class="card-user__bg">
 		</div>
 		<div class="card-user__photo-wrapper">
-			<img src="../../../../assets/images/profile.jpg" alt="" class="card-user__photo">
+			<img :src="photo" alt="" class="card-user__photo">
 		</div>
 		<div class="card-user__info">
 			<span class="card-user__name">{{name}}</span>
 			<span class="card-user__statistic">{{statisctic}} Тусовочек</span>
 		</div>
 		<div class="card-user__action">
-			<v-button label='Follow' class="card-user__follow"/>
-			<v-button label='icon'/>
+			<v-button label='Follow' class="button"/>
+			<v-button label='icon' class="button--bg"/>
 		</div>
 	</div>
 </template>
@@ -23,15 +23,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class CardUser extends Vue {
 
-	@Prop({ default: ()=>{
-		return {}
-	}})
-  readonly card?: Object
-
 	data () {
 		return {
-				name: 'Kexibq',
-				statisctic: 12
+				name: 'Vadim',
+				statisctic: 12,
+				photo: require('../../../../assets/images/profile.jpg'),
+				bg: require('../../../../assets/images/bg.jpg')
 		}
 	}
 

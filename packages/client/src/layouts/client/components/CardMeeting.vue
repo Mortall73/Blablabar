@@ -1,12 +1,11 @@
 <template>
   <div class="card-meeting">
-		<div class="card-meeting__organizer">
-			<!-- CardUser-->
-			<span class="card-meeting__organizer-name">{{OrganizerName}}</span>
+		<div class="card-meeting__organize">
+			<v-user class="user--organize"/>
 		</div>
 		<div class="card-meeting__place-galery">
 			<div class="card-meeting__place-photo-wrapper">
-				<img class="card-meeting__place-photo" src="../../../../assets/images/bar.jpg" alt="">
+				<img class="card-meeting__place-photo" :src="src" alt="">
 			</div>
 			<!-- slider-->
 		</div>
@@ -14,7 +13,9 @@
 			<span class="card-meeting__name">{{MeetingName}}</span>
 			<span class="card-meeting__date-creation">{{DateCreation}}</span>
 			<div class="card-meeting__participants">
-				<!-- CardUser-->
+				<v-user class="user--participants"/>
+				<v-user class="user--participants"/>
+				<v-user class="user--participants"/>
 			</div>
 		</div>
 		<div class="card-meeting__date">
@@ -27,10 +28,12 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 import CardDate from '@/layouts/client/components/CardDate.vue';
+import User from '@/layouts/client/components/User.vue';
 
 @Component({
     components: {
 				'v-card-date': CardDate,
+				'v-user': User,
     }
 })
 export default class CardMeeting extends Vue {
@@ -46,7 +49,8 @@ data () {
 				OrganizerName: 'Vadim',
 				MeetingName: 'Тусич по барам Ульска',
 				DateCreation: '23.09.2020',
-				rating: '8'
+				rating: '8',
+				src: require('../../../../assets/images/bar.jpg')
 		}
 	}
 
@@ -62,8 +66,8 @@ data () {
 	height: 400px;
 	color: $color-text;
 	position: relative;
-	&__organizer {
-		padding: 20px;
+	&__organize {
+		padding: 20px 20px 10px 20px;
 	}
 	&__place-photo-wrapper {
 		height: 150px;
@@ -94,6 +98,9 @@ data () {
 		position: absolute;
 		top: 175px;
 		left: 16px;
+	}
+	&__participants {
+		display: flex;
 	}
 }
 </style>

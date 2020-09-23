@@ -18,8 +18,8 @@ export default class CardDate extends Vue {
 	
 data () {
 		return {
-				day: 21,
-				month: 'May'
+				day: 23,
+				month: 'september'
 		}
 	}
 }
@@ -27,7 +27,7 @@ data () {
 
 <style lang="scss" scoped>
 .card-date {
-	max-width: 40px;
+	max-width: 60px;
 	max-height: 50px;
 	background-color: white;
 	border-radius: 10px;
