@@ -42,11 +42,13 @@
       </div>
       <div class="block__item">
         <p class="block__title">CARDS</p>
-        <v-card-place v-for="card in cards" :key="card.id"/>
+        <v-card-place/>
 				<v-card-meeting/>
 				<v-card-date/>
 				<v-card-user/>
 				<v-user/>
+				<v-user class="user--organize"/>
+				<v-user class="user--participants"/>
       </div>
       <div class="block__item">
         <p class="block__title">SELECT</p>
@@ -80,12 +82,7 @@ import User from '@/layouts/client/components/User.vue';
 })
 
 export default class UiKitPage extends Vue {
-  private cards = [
-    {
-			name: 'bla bla',
-			id: 1,
-    }
-  ]
+  
 }
 </script>
 
