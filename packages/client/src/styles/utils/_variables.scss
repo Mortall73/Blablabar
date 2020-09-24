@@ -1,13 +1,8 @@
 // COLORS - CONTENT
 $color-text: #fff;
 $color-text-light: #929294;
-$color-title: #928879;
 
 $color-background: #31323b;
-
-// COLORS - LINKS
-$color-link: #39a275;
-$color-link-active: $color-text;
 
 
 // COLORS - BUTTONS
@@ -16,15 +11,9 @@ $cl-color-button--bg: #303134;
 
 // COLORS - INPUT
 $cl-color-input: #303134;
-// FONTS
-$font-text: 'Open Sans';
 
 // DURATIONS
 $duration-animation-base: 300ms;
-
-// RADIUS
-$radius-default: 4px;
-
 
 // Resolution
 $desktop-big: 1920px;
@@ -38,3 +27,4 @@ $mobile: 320px;
 $cl-white: #fff;
 $cl-black: #000;
 $cl-black-bg: #191A1D;
+$cl-gray:#617582;
