@@ -38,5 +38,11 @@ export default class Button extends Vue {
 	&--bg	{
 		background-color: $cl-color-button--bg;
 	}
+	&--mrg-s {
+		margin-right: 5px;
+	}
+	&--mrg-l {
+		margin-right: 10px;
+	}
 }
 </style>
