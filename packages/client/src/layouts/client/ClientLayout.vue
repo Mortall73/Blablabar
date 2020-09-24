@@ -18,5 +18,7 @@ export default class ClientLayout extends Vue {
 
 
 <style lang="scss">
-    
+  .page {
+		width: 100%;
+	}
 </style>
