@@ -51,7 +51,8 @@
 				<v-user class="user--participants"/>
       </div>
       <div class="block__item">
-        <p class="block__title">SELECT</p>
+        <p class="block__title">COMPONENTS</p>
+				<v-tag-list :items="tags"/>
       </div>
       <div class="block__item">
         <p class="block__title">POPUP</p>
@@ -71,6 +72,7 @@ import CardMeeting from '@/layouts/client/components/CardMeeting.vue';
 import CardDate from '@/layouts/client/components/CardDate.vue';
 import CardUser from '@/layouts/client/components/CardUser.vue';
 import User from '@/layouts/client/components/User.vue';
+import TagList from '@/layouts/client/components/TagList.vue';
 @Component({
     components: {
 				'v-card-place': CardPlace,
@@ -78,11 +80,26 @@ import User from '@/layouts/client/components/User.vue';
 				'v-card-date': CardDate,
 				'v-card-user': CardUser,
 				'v-user': User,
+				'v-tag-list': TagList,
     }
 })
 
 export default class UiKitPage extends Vue {
-  
+  private tags = [
+		{
+			tag: 'Рок'
+		},
+		{
+			tag: 'Темный пивас'
+		},
+		{
+			tag: 'Электронная мызыка'
+		},
+		{
+			tag: 'шумные тусовки'
+		}
+		
+	]
 }
 </script>
 

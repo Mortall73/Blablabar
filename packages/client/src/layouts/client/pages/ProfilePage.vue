@@ -24,7 +24,7 @@
 					<h3 class="profile__location">{{city}}</h3>
 					<div class="profile__about">
 						<span class="profile__text">{{about}}</span>
-						<!--tag-list-->
+						<v-tag-list :items="tags"/>
 					</div>
 				</div>
 			</div>
@@ -38,10 +38,12 @@ import { Vue, Component } from 'vue-property-decorator';
 
 import Footer from '@/layouts/client/components/Footer.vue';
 import User from '@/layouts/client/components/User.vue';
+import TagList from '@/layouts/client/components/TagList.vue';
 @Component({
     components: {
 				'v-footer': Footer,
 				'v-user': User,
+				'v-tag-list': TagList,
     }
 })
 export default class ProfilePage extends Vue {
@@ -55,7 +57,22 @@ data () {
 				city: 'Ульяновск',
 				about: 'Немного о себе бла бла бла',
 		}
-	}
+	};
+	private tags = [
+		{
+			tag: 'настойки'
+		},
+		{
+			tag: 'Темный пивас'
+		},
+		{
+			tag: 'Электронная мызыка'
+		},
+		{
+			tag: 'шумные тусовки'
+		}
+		
+	]
 }
 </script>
 
