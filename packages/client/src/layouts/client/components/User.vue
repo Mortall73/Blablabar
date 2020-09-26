@@ -74,5 +74,20 @@ data () {
 			display: none;
 		}
 	}
+		&--profile {
+			display: inline-block;
+			margin-right: 5px;
+		.user__photo-wrapper {
+			width: 80px;
+			height: 80px;
+			margin-bottom: 0;
+		}
+		.user__last-visit {
+			display: none;
+		}
+		.user__name {
+			display: none;
+		}
+	}
 }
 </style>

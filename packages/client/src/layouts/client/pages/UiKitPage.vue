@@ -29,7 +29,7 @@
         <v-checkbox label="checkbox" name="q" :checked="true"/>
         <v-checkbox label="checkbox" name="q" :disabled="true"/>
       </div>
-      <div class="block__item">
+      <div class="block__item black">
         <p class="block__title">INPUT</p>
         <v-input placeholder="bla bla"/>
         <v-input type="search" placeholder="bla bla"/>
@@ -42,14 +42,17 @@
       </div>
       <div class="block__item">
         <p class="block__title">CARDS</p>
-        <v-card-place v-for="card in cards" :key="card.id"/>
+        <v-card-place/>
 				<v-card-meeting/>
 				<v-card-date/>
 				<v-card-user/>
 				<v-user/>
+				<v-user class="user--organize"/>
+				<v-user class="user--participants"/>
       </div>
       <div class="block__item">
-        <p class="block__title">SELECT</p>
+        <p class="block__title">COMPONENTS</p>
+				<v-tag-list :items="tags"/>
       </div>
       <div class="block__item">
         <p class="block__title">POPUP</p>
@@ -69,6 +72,7 @@ import CardMeeting from '@/layouts/client/components/CardMeeting.vue';
 import CardDate from '@/layouts/client/components/CardDate.vue';
 import CardUser from '@/layouts/client/components/CardUser.vue';
 import User from '@/layouts/client/components/User.vue';
+import TagList from '@/layouts/client/components/TagList.vue';
 @Component({
     components: {
 				'v-card-place': CardPlace,
@@ -76,34 +80,49 @@ import User from '@/layouts/client/components/User.vue';
 				'v-card-date': CardDate,
 				'v-card-user': CardUser,
 				'v-user': User,
+				'v-tag-list': TagList,
     }
 })
 
 export default class UiKitPage extends Vue {
-  private cards = [
-    {
-			name: 'bla bla',
-			id: 1,
-    }
-  ]
+  private tags = [
+		{
+			tag: 'Рок'
+		},
+		{
+			tag: 'Темный пивас'
+		},
+		{
+			tag: 'Электронная мызыка'
+		},
+		{
+			tag: 'шумные тусовки'
+		}
+		
+	]
 }
 </script>
 
 
 <style lang="scss">
+@import '../../../styles/utils/_variables.scss';
   .block {
     margin: 0 auto;
     width: 1100px;
     &__item {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+			justify-content: space-around;
+			padding-bottom: 50px;
     }
     &__title {
       font-size: 32px;
       text-align: center;
       width: 100%;
-    }
+		}
+		.black {
+			background-color: $cl-black-bg;
+		}
   }
 </style>

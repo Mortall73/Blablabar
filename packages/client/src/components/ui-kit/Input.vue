@@ -1,6 +1,6 @@
 <template>
   <label>
-    <input
+    <input class="input"
       :id="id"
       :name="name"
       :placeholder="placeholder"
@@ -45,6 +45,13 @@ export default class Input extends Vue {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+@import '../../styles/utils/_variables.scss';
+.input {
+	background-color: $cl-color-input;
+	border: none;
+	border-radius: 10px;
+	color: $color-text;
+	padding: 10px 20px;
+}
 </style>
